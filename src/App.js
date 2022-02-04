@@ -1,4 +1,5 @@
-
+import React from 'react';
+import ReactDOM from 'react-dom';
 import { AppBar, Container, CssBaseline, Toolbar, Typography, Button, Grid, CardContent, CardActions } from '@mui/material';
 import PhotoCameraIcon  from '@mui/icons-material/PhotoCamera';
 import CardMedia from '@mui/material/CardMedia';
@@ -6,7 +7,17 @@ import Card from '@mui/material/Card';
 import useStyles from './styles';
 
 
-const cards = [1,2,3,4,5,6,7,8,9]
+
+const images = [
+  { 'id': 1 , 'name': 'Elise' , 'link': "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Elise_0.jpg"},
+  { 'id': 2 , 'name': 'Graves' ,'link': "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Graves_0.jpg"},
+  { 'id': 3 , 'name': 'Viego' ,'link': "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Viego_0.jpg"},
+  { 'id': 4 , 'name': 'Shyvanna' ,'link': "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Shyvana_0.jpg"},
+  { 'id': 5 , 'name': 'Khazix' ,'link': "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Khazix_0.jpg"},
+  { 'id': 6 , 'name': 'Nocturne' ,'link': "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Nocturne_0.jpg"},
+  { 'id': 7 , 'name': 'Kindred' ,'link': "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kindred_0.jpg"},
+  { 'id': 9 , 'name': 'Shaco' ,'link': "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Shaco_0.jpg"}
+]
 
 
 function App() {
@@ -14,11 +25,11 @@ function App() {
     <>
       <CssBaseline />
       <AppBar position="relative">
-        <Toolbar>
-          <PhotoCameraIcon sx={useStyles.icon}/>
-          <Typography variant="h6">Junglers Photo Album</Typography>
-        </Toolbar>
-      </AppBar>
+            <Toolbar>
+                <PhotoCameraIcon sx={useStyles.icon}/>
+                <Typography variant="h6">Junglers Photo Album</Typography>
+            </Toolbar>
+        </AppBar>
       <main>
         <div>
           <Container maxWidth="sm" sx={useStyles.container} >
@@ -38,16 +49,16 @@ function App() {
         </div>
         <Container sx={useStyles.cardGrid} maxWidth="md">
           <Grid container spacing={4} >
-            {cards.map((card) => (
-              <Grid item key={card} xs={12} sm={6} md={4}>
+            {images.map((image, id) => (
+              <Grid item key={id} xs={12} sm={6} md={4}>
               <Card sx={useStyles.Card}> 
                  <CardMedia
                   sx={useStyles.cardMedia}
-                  image="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Elise_0.jpg" 
+                  image={image.link}
                   />
                   <CardContent sx={useStyles.cardContent}>
                     <Typography gutterBottom variant='h5'>
-                      Elise
+                      {image.name}
                     </Typography>
                     <Typography>
                       Description
