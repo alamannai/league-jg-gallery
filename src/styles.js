@@ -4,9 +4,6 @@
         marginTop: '100px',
         padding: '10px'
     },
-    'icon' :{
-        marginRight: '20px',
-    },
     'buttons': {
         marginTop: '40px',
     },
@@ -27,8 +24,16 @@
     'footer': {
         backgroundColor:'red',
         padding: '50px 0'
-    }
-};
+    },
+    'back' : {
+        position: 'relative' ,
+        background: '#E4E9F7',
+        minHeight: '100vh',
+        top: '0' ,
+        left: '78px' 
+      }
+
+}
     
 
   export default useStyles ;

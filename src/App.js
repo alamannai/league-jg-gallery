@@ -1,89 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { AppBar, Container, CssBaseline, Toolbar, Typography, Button, Grid, CardContent, CardActions } from '@mui/material';
-import PhotoCameraIcon  from '@mui/icons-material/PhotoCamera';
-import CardMedia from '@mui/material/CardMedia';
-import Card from '@mui/material/Card';
-import useStyles from './styles';
+import Bar from './Components/Bar/Bar';
+import ChampSection from './Components/ChampSection/ChampSection';
 
 
 
-const images = [
-  { 'id': 1 , 'name': 'Elise' , 'link': "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Elise_0.jpg"},
-  { 'id': 2 , 'name': 'Graves' ,'link': "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Graves_0.jpg"},
-  { 'id': 3 , 'name': 'Viego' ,'link': "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Viego_0.jpg"},
-  { 'id': 4 , 'name': 'Shyvanna' ,'link': "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Shyvana_0.jpg"},
-  { 'id': 5 , 'name': 'Khazix' ,'link': "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Khazix_0.jpg"},
-  { 'id': 6 , 'name': 'Nocturne' ,'link': "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Nocturne_0.jpg"},
-  { 'id': 7 , 'name': 'Kindred' ,'link': "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kindred_0.jpg"},
-  { 'id': 9 , 'name': 'Shaco' ,'link': "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Shaco_0.jpg"}
-]
-
-
-function App() {
+const App = () =>  {
   return (
-    <>
-      <CssBaseline />
-      <AppBar position="relative">
-            <Toolbar>
-                <PhotoCameraIcon sx={useStyles.icon}/>
-                <Typography variant="h6">Junglers Photo Album</Typography>
-            </Toolbar>
-        </AppBar>
-      <main>
-        <div>
-          <Container maxWidth="sm" sx={useStyles.container} >
-            <Typography variant="h2" align="center" color="textPrimary" gutterBotom>Jungle Album</Typography>
-            <Typography variant="h5" align="center" color="textSecondary" paragraph>This a list of my main Junglers ...</Typography>
-            <div sx={useStyles.buttons}>
-              <Grid container spacing={2} justifyContent={"center"} >
-                <Grid item>
-                  <Button variant="contained" color="primary">see my photos</Button>
-                </Grid>
-                <Grid item>
-                  <Button variant="outlined" color="primary">secondary action</Button>
-                </Grid>
-              </Grid>
-            </div>
-          </Container>
-        </div>
-        <Container sx={useStyles.cardGrid} maxWidth="md">
-          <Grid container spacing={4} >
-            {images.map((image, id) => (
-              <Grid item key={id} xs={12} sm={6} md={4}>
-              <Card sx={useStyles.Card}> 
-                 <CardMedia
-                  sx={useStyles.cardMedia}
-                  image={image.link}
-                  />
-                  <CardContent sx={useStyles.cardContent}>
-                    <Typography gutterBottom variant='h5'>
-                      {image.name}
-                    </Typography>
-                    <Typography>
-                      Description
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Button size="small" color="primary">View</Button>
-                    <Button size="small" color="primary">Edit</Button>
-                  </CardActions>
-              </Card>
-            </Grid>
-            ))}
-          </Grid>
-        </Container>
-      </main>
-      <footer sx={useStyles.footer}>
-              <Typography variant='h6' align='center' gutterBottom>
-                Footer
-              </Typography>
-              <Typography variant='subtitle1' align='center' color='textSecondary'>
-                Thank you for visit
-              </Typography>
-      </footer>
-    </>
+      <div className='p-0 m-0'>
+        <ChampSection />
+      </div>
   );
-}
+};
 
 export default App;
