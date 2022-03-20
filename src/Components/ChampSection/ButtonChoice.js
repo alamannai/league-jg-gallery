@@ -1,13 +1,15 @@
-import React from 'react';
+import React ,{ useState }  from 'react';
 
 const ButtonChoice = (props) =>  {
+    const act = "bg-yellow-300 text-black rounded-lg"
+    const  noact = "grow h-8 w-30 bg-sky-600 text-white rounded-full"
+    const [def, setDef] = useState([noact]);
+
+  
     return(
-    <>
-        <button className='grow h-8 w-30 bg-gray-800 text-green-500 
-                            hover:bg-green-600 hover:text-white 
-                            rounded-full hover:rounded-lg transition-all duration-250 ease-linear
-                            '>{props.name}</button>
-    </>  
+            <button className={def} onClick={() => ( def == noact ? setDef(act) : setDef(noact) )  }>
+                {props.name}
+            </button>
     )};
 
 export default ButtonChoice;
