@@ -5,9 +5,13 @@ const ButtonChoice = (props) =>  {
     const  noact = "grow h-8 w-30 bg-sky-600 text-white rounded-full"
     const [def, setDef] = useState([noact]);
 
+    function hundleClicked(){
+        def == noact ? setDef(act) : setDef(noact) ;
+    }
+
   
     return(
-            <button className={def} onClick={() => ( def == noact ? setDef(act) : setDef(noact) )  }>
+            <button className={def} onClick={  hundleClicked}>
                 {props.name}
             </button>
     )};

@@ -16,7 +16,8 @@ return (
     <>
         <div className='p-3 grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 
                     lg:grid-cols-6 xl:grid-cols-6 gap-3'>
-            <ButtonChoice name={'Fighter'}  />
+
+            <ButtonChoice name={'Fighter'}/>
             <ButtonChoice name={'Assassin'}  />
             <ButtonChoice name={'Mage'} />
             <ButtonChoice name={'Marksman'}  />
@@ -27,6 +28,19 @@ return (
 
         <div className="p-3 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 
                     lg:grid-cols-2 xl:grid-cols-3 gap-3">
+                      <ChampElement item={champs.Elise} />
+                      
+                      <ChampElement item={champs.Shaco} />
+                      
+                      <ChampElement item={champs.Graves} />
+                      
+                      <ChampElement item={champs.Nidalee} />
+                      
+                      <ChampElement item={champs.Diana} />
+                      
+                      <ChampElement item={champs.Draven} />
+
+
         </div>
     </> 
     )};
