@@ -1,5 +1,5 @@
 import React from 'react';
-import Bar from './Components/Bar/Bar';
+import './App.css';
 import ChampSection from './Components/ChampSection/ChampSection';
 import Hero from './Components/Hero/Hero';
 
@@ -10,6 +10,7 @@ const App = () =>  {
     <>
       <div className='p-0 m-0'>
         <Hero />
+        <hr />
         <ChampSection />
       </div>
       </>

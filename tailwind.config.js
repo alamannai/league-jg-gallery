@@ -5,8 +5,9 @@ module.exports = {
   theme: {
     extend: {
       colors:{
-        primary:'#202225',
-        secondary:'#5865f2',
+        primary:'#0F1624',
+        button: "hsl(205.1,100%,36.1%)",
+        sec:'#0F1624',
         gray:{
           900: '#202225',
           800: '#2f3136',

@@ -1,18 +1,23 @@
 import React ,{ useState }  from 'react';
 
-const ButtonChoice = (props) =>  {
-    const act = "bg-yellow-300 text-black rounded-lg"
-    const  noact = "grow h-8 w-30 bg-sky-600 text-white rounded-full"
+const ButtonChoice = ({dataToParent ,name }) =>  {
+    const act = "bg-yellow-300 text-primary font-semibold text-center  rounded-lg"
+    const  noact = "grow h-8 w-30 bg-sky-400 text-primary font-semibold text-center rounded-full "
     const [def, setDef] = useState([noact]);
+
+    const data = name
+
+
 
     function hundleClicked(){
         def == noact ? setDef(act) : setDef(noact) ;
+        def == noact ? dataToParent(data) : dataToParent(false)  ;
     }
 
   
     return(
-            <button className={def} onClick={  hundleClicked}>
-                {props.name}
+            <button className={def} onClick={hundleClicked}>
+                {name}
             </button>
     )};
 
