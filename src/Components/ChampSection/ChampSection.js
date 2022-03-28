@@ -22,18 +22,20 @@ const ChampSection = () =>  {
     setAssassin(childdata);
   }
 
-  useEffect(() => {
-    fetch(API_URL).then(response => response.json())
-    .then(data => setChamps({ champions: Object.values(data.data) }))
-  }, [])
+ const searchChamps = async () => {
+   const response = await fetch(API_URL);
+   const data = await response.json();
+   setChamps({ champions: Object.values(data.data) });
+  };
 
+ useEffect(() => {
+  searchChamps();
+}, []);
 
- // const searchChamps = async () => {
-   // const response = await fetch(API_URL);
-   // const data = await response.json();
-   // setChamps({ champions: Object.values(data.data) });
-   // console.log(champs);
- // };
+  //useEffect(() => {
+    //fetch(API_URL).then(response => response.json())
+    //.then(data => setChamps({ champions: Object.values(data.data) }))
+  //}, [])
 
 return (
     <>
