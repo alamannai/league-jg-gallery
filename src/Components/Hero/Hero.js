@@ -16,7 +16,7 @@ const Hero = () =>  {
                             I find it a nice idea to improve my knowledge with this library. 
                         </p>
                         <div className="mt-6">
-                    <a href="#"
+                    <a href="https://github.com/alamannai/league-jg-gallery"
                         className="block px-3 py-2 font-semibold text-center text-primary 
                         transition-colors duration-200 transform bg-yellow-300 rounded-md 
                         lg:inline hover:bg-yellow-100">
